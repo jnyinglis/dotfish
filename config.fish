@@ -1,15 +1,15 @@
 #
 set -x VIMINIT ":source ~/.vim/.vimrc"
 
-if -e $HOME/.cargo
+if [ -e $HOME/.cargo ]
   set PATH $PATH $HOME/.cargo/bin /opt/local/bin /opt/local/sbin
 end
 
-if -e /anaconda3
+if [ -e /anaconda3 ]
   set PATH $PATH /anaconda3/bin
 end
 
-if -e $HOME/anaconda3
+if [ -e $HOME/anaconda3 ]
   set PATH $PATH $HOME/anaconda3/bin
 end
 
