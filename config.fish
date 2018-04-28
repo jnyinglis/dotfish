@@ -1,10 +1,16 @@
 #
 set -x VIMINIT ":source ~/.vim/.vimrc"
 
+# This is for Rust - www.rust-lang.org
 if [ -e $HOME/.cargo ]
-  set PATH $PATH $HOME/.cargo/bin /opt/local/bin /opt/local/sbin
+  set PATH $PATH $HOME/.cargo/bin
 end
 
+# This is for Macports
+if [ -e /opt/local/bin ]
+  set PATH $PATH /opt/local/bin /opt/local/sbin
+end
+# Anaconda
 if [ -e /anaconda3 ]
   set PATH $PATH /anaconda3/bin
 end
